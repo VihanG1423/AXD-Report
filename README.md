@@ -1,83 +1,99 @@
-# AXD-Report
-AXD Report
+#🎵 AXD Digital Report: Motion-Controlled Audio Interaction
 
-Audio Experience Design - Digital Report
+**Project for the Audio Experience Design (AXD) module at Dyson School of Design Engineering.**  
+This project explores **gesture-controlled music interaction** using **MediaPipe, OpenCV, Max/MSP, and UDP communication**.  
+Users can **toggle instruments, generate drum beats, and interact with music** using **hand-tracking-based gestures**.
 
-1. Introduction
+---
 
-This report details my contributions to the Audio Experience Design (AXD) module, which focused on the conception, design, and implementation of an interactive audio installation. The installation aimed to create an immersive auditory experience by integrating sound processing techniques with hardware and software components.
+## Work Plan Breakdown  
 
-As part of this module, I was responsible for specific aspects of the project, including [mention your role, e.g., software development, hardware integration, concept design, testing, etc.]. This report outlines the initial goals, design and development process, final implementation, and evaluation of the completed installation.
+###**Work Plan 1: Gesture-Based Instrument Control**  
+**Relevant Files:**  
+- `hand_recognition.py` (Python script for hand tracking & UDP communication)  
+- **Intel OpenVino Music segmentation Plugin**  
+- **Max/MSP Patch for Gesture-Based Audio Toggling**  
+- **After Effects 3D Visualizer**  
 
-2. Initial Goals and Work Plan
+**Overview:**  
+- The **goal** was to explore **motion capture-based interaction** in an **orchestral performance**.  
+- Users can **toggle instrument segments** (Drums, Bass, Rest) using **hand gestures**.  
+- The **MediaPipe & OpenCV** script tracks hand movements and sends data via **UDP** to **Max/MSP**.  
+- **Max/MSP handles real-time audio toggling**, while **After Effects** generates **3D waveform visuals**.
 
-At the beginning of the module, I set out the following goals:
+###✋**Hand Gesture Controls:**
+| Gesture | Function |
+|---------|-------------|
+| ✌️ Two Fingers (5 sec) | Toggle Rest Mode |
+| 👍 Thumbs Up (5 sec) | Toggle Drums On/Off |
+| ✊ Fist (5 sec) | Toggle Bass On/Off |
 
-[Goal 1: e.g., Develop an intuitive sound-processing system for real-time interaction.]
+**[View Work Plan 1 Figma](./A4-2.png)**  
 
-[Goal 2: e.g., Ensure seamless integration of audio software with hardware components.]
+---
 
-[Goal 3: e.g., Contribute to the installation’s aesthetics and user interaction.]
+### **Work Plan 2: Interactive Drum Pad Using Gestures**  
+**Relevant Files:**  
+- `MaxMSP DrumPad Patch`  
+- `hand_recognition.py` (Hand tracking updates for beat triggering)  
+- **Gesture-Based Drum Sequencing Algorithm**  
 
-My work plan included:
+**Overview:**  
+- Built a **gesture-controlled DrumPad** where **users can play drum beats** using **hand movements**.  
+- Each **drum component (Kick, Snare, Hi-Hat)** is mapped to **grid positions** using **hand tracking**.  
+- Used **Max/MSP Jitter** to **visualize** real-time drum sequences.  
 
-Week 4-6: Research and initial concept development.
+### 🥁 **Beat Mapping:**
+| Gesture | Drum Component |
+|---------|---------------|
+| ✊ Fist | Kick Drum (Activated when moving) |
+| ✌️ Victory | Snare Drum (Triggered when hands are still) |
+| ✋ Open Palm | Hi-Hat (Beeps with Metronome) |
 
-Week 7-9: Prototyping, testing, and iteration.
+**[View Work Plan 2 Figma](./A4-5.png)**  
 
-Week 10-11: Finalizing the installation and conducting evaluations.
+---
 
-3. Design and Development
+###**Work Plan 3: Gesture-Based Generative Drum Beat**  
+**Relevant Files:**  
+- `hand_recognition.py` (Final Gesture-Integrated Version)  
+- `MaxMSP Grid-Based Beat Sequencer`  
+- **UDP Integration for Gesture Triggering**  
 
-The design process involved several key phases:
+**Overview:**  
+- **Upgraded** the motion capture system to control a **generated drum beat** via **hand gestures**.  
+- Implemented a **GridSpace system**, mapping drum components to a **spatial hand-tracking matrix**.  
+- UDP communication **sends gestures to Max/MSP**, triggering unique drum sequences.
 
-Concept Development: The team brainstormed ideas and finalized a concept that aligned with the module objectives.
+### 🎼 **Grid-Based Mapping:**
+| Row | Drum Component |
+|-----|--------------|
+| **1** | Kick |
+| **2** | Snare |
+| **3** | Hi-Hat |
 
-Software Development: I worked on [describe your software contributions, e.g., developing an algorithm for real-time frequency analysis using MaxMSP].
+**[View Work Plan 3 Figma](./A4-6.png)**  
 
-Hardware Integration: I collaborated with the team to integrate [mention hardware elements like microphones, speakers, sensors, LED systems].
+---
 
-User Experience and Testing: We conducted multiple iterations to refine the installation’s usability and responsiveness.
+## 🔹 **Final Code Implementation**  
+**📂 Final Files:**  
+- `hand_recognition.py` (Final Optimized Code)  
+- `MaxMSP Interactive Beat System`  
+- **Full Gesture-Based Interaction Patch**  
 
-4. Implementation and Installation
+### **Final Concept Summary**  
+✅ Integrated **gesture-based drum sequencing and instrument toggling** into a **real-time performance system**.  
+✅ **Final prototype** allows **users to interact dynamically with music** using only **hand gestures**.  
+✅ Combines **computer vision, AI-driven gesture recognition, and Max/MSP audio manipulation**.  
 
-The final installation featured:
+📎 **[View Final Work Plan Figma](./A4-7.png)**  
 
-Audio Processing: Utilized [explain techniques like FFT, sound spatialization, interactive audio synthesis].
+---
 
-Hardware Setup: Included [describe hardware setup, e.g., placement of speakers, use of microcontrollers].
+## **🛠️ How to Run the Project**
+### **1️⃣ Install Dependencies**
+Ensure Python is installed (recommended: **Python 3.7 - 3.10**). Then install the necessary libraries:
 
-Interactivity: Users could [explain how users interacted, e.g., trigger sound effects, modify frequency responses].
-
-Challenges faced:
-
-[Challenge 1: e.g., Synchronizing multiple audio outputs]
-
-[Challenge 2: e.g., Latency issues in real-time processing]
-
-[Challenge 3: e.g., Optimizing the user interface for accessibility]
-
-5. Review of the Installation
-
-After installation, we evaluated the experience based on:
-
-Technical Performance: The system successfully processed and output audio as expected, though some latency issues required minor adjustments.
-
-User Engagement: Observations and feedback showed that participants found the installation engaging and educational.
-
-Aesthetic and Functional Success: The visual and auditory elements blended well, creating an immersive experience.
-
-6. Conclusions and Future Work
-
-The project successfully demonstrated key principles of interactive audio experience design. However, future improvements could include:
-
-Enhanced real-time responsiveness: Improving latency in processing.
-
-Expanded interactivity: Introducing more dynamic controls for users.
-
-Further hardware refinements: Refining sensor accuracy and audio quality.
-
-Overall, this module provided a valuable opportunity to apply theoretical knowledge to a hands-on project, deepening my understanding of audio experience design and interdisciplinary collaboration.
-
-End of Report
-
+```bash
+pip install mediapipe opencv-python python-osc
