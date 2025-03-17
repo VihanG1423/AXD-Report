@@ -1,4 +1,4 @@
-#🎵 AXD Digital Report: Motion-Controlled Audio Interaction
+# 🎵 AXD Digital Report: Motion-Controlled Audio Interaction
 
 **Project for the Audio Experience Design (AXD) module at Dyson School of Design Engineering.**  
 This project explores **gesture-controlled music interaction** using **MediaPipe, OpenCV, Max/MSP, and UDP communication**.  
