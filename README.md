@@ -6,7 +6,7 @@ Users can **toggle instruments, generate drum beats, and interact with music** u
 
 ---
 
-![Work Plan 3](images/A4-6.png)
+![Work Plan 3](images/WP3.png)
 
 
 ## Work Plan Breakdown  
