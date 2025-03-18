@@ -8,8 +8,8 @@ Users can **toggle instruments, generate drum beats, and interact with music** u
 
 ## Work Plan Breakdown  
 
-###**Work Plan 1: Gesture-Based Instrument Control**  
-**Relevant Files:**  
+### **Work Plan 1: Gesture-Based Instrument Control**  
+**Files used:**  
 - `hand_recognition.py` (Python script for hand tracking & UDP communication)  
 - **Intel OpenVino Music segmentation Plugin**  
 - **Max/MSP Patch for Gesture-Based Audio Toggling**  
@@ -21,7 +21,7 @@ Users can **toggle instruments, generate drum beats, and interact with music** u
 - The **MediaPipe & OpenCV** script tracks hand movements and sends data via **UDP** to **Max/MSP**.  
 - **Max/MSP handles real-time audio toggling**, while **After Effects** generates **3D waveform visuals**.
 
-###✋**Hand Gesture Controls:**
+### ✋**Hand Gesture Controls:**
 | Gesture | Function |
 |---------|-------------|
 | ✌️ Two Fingers (5 sec) | Toggle Rest Mode |
