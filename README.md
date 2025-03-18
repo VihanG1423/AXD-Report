@@ -6,10 +6,7 @@ Users can **toggle instruments, generate drum beats, and interact with music** u
 
 ---
 
-![MaxMSP Patch](images/A4 -6.png)
-
-
-
+![Work Plan 3](images/A4-6.png)
 
 
 ## Work Plan Breakdown  
